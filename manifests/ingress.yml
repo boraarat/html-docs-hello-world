@@ -1,0 +1,17 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: "boraaks-3f2f"
+    labels:
+        app: "boraaks-3f2f"
+    annotations:
+        kubernetes.io/ingress.class: addon-http-application-routing
+spec:
+    rules:
+        - host: boraaks99a5-boraaks-3f2f.f951e7e13ca5440da952.westeurope.aksapp.io
+          http:
+            paths:
+            - path: /
+              backend:
+                serviceName: "boraaks-3f2f"
+                servicePort: 80
