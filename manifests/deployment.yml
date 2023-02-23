@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "boraaks-3f2f"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "boraaks-3f2f"
+  template:
+    metadata:
+      labels:
+        app: "boraaks-3f2f"
+    spec:
+      containers:
+        - name: "boraaks-3f2f"
+          image: "boraregissteerrrrr.azurecr.io/boraaks"
+          ports:
+          - containerPort: 80
